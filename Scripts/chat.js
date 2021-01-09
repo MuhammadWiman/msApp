@@ -545,7 +545,7 @@ function signOut() {
 }
 
 function onFirebaseStateChanged() {
-    firebase.auth().onAuthStateChanged(onStateChanged);
+    firebase.auth().onAuthStateChanged(function(user);
 }
 
 function onStateChanged(user) {
