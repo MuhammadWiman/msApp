@@ -544,7 +544,7 @@ function signOut() {
     firebase.auth().signOut();
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         //alert(firebase.auth().currentUser.email + '\n' + firebase.auth().currentUser.displayName);
 
@@ -617,4 +617,4 @@ function callback(error) {
         document.getElementById('lnkSignOut').style = '';
     }
 }
-}
+
