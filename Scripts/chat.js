@@ -544,11 +544,7 @@ function signOut() {
     firebase.auth().signOut();
 }
 
-function onFirebaseStateChanged() {
-    firebase.auth().onAuthStateChanged(user);
-}
-
-function onStateChanged(user) {
+firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         //alert(firebase.auth().currentUser.email + '\n' + firebase.auth().currentUser.displayName);
 
