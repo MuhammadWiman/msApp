@@ -1,4 +1,6 @@
-﻿var currentUserKey = '';
+import firebase from 'firebase'
+require('firebase/auth')
+var currentUserKey = '';
 var chatKey = '';
 var friend_id = '';
 
