@@ -617,3 +617,4 @@ function callback(error) {
         document.getElementById('lnkSignOut').style = '';
     }
 }
+}
