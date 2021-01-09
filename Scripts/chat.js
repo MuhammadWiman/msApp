@@ -603,7 +603,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         document.getElementById('lnkNewChat').classList.add('disabled');
     }
-}
+
 
 function callback(error) {
     if (error) {
