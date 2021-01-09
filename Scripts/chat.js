@@ -543,8 +543,10 @@ function signIn() {
 function signOut() {
     firebase.auth().signOut();
 }
-
-    firebase.auth().onAuthStateChanged(function(user) {
+function onFirebaseStateChanged(user) {
+    firebase.auth().onAuthStateChanged(onStateChanged);
+}
+function onStateChanged(user) {
     if (user) {
         //alert(firebase.auth().currentUser.email + '\n' + firebase.auth().currentUser.displayName);
 
@@ -603,7 +605,7 @@ function signOut() {
 
         document.getElementById('lnkNewChat').classList.add('disabled');
     }
-
+}
 
 function callback(error) {
     if (error) {
@@ -618,3 +620,7 @@ function callback(error) {
     }
 }
 
+/////////
+// Call auth State changed
+
+onFirebaseStateChanged();
