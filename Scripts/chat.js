@@ -617,8 +617,3 @@ function callback(error) {
         document.getElementById('lnkSignOut').style = '';
     }
 }
-
-/////////
-// Call auth State changed
-
-onFirebaseStateChanged();
