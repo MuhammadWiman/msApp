@@ -581,7 +581,7 @@ function onStateChanged(user) {
 
             const messaging = firebase.messaging();
 
-            navigator.serviceWorker.register('msApp/firebase-messaging-sw.js')
+            navigator.serviceWorker.register('messaging/firebase-messaging-sw.js')
                 .then((registration) => {
                     messaging.useServiceWorker(registration);
 
