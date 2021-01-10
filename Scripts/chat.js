@@ -235,7 +235,7 @@ function SendMessage() {
                         'Authorization': 'key=AIzaSyDifQRePehp9--HSV6m10QnXgO12ZGYC00'
                     },
                     data: JSON.stringify({
-                        'to': data.value().token_id, 'data': { 'message': chatMessage.msg.substring(0, 30) + '...', 
+                        'to': data.any().token_id, 'data': { 'message': chatMessage.msg.substring(0, 30) + '...', 
                            'icon': firebase.auth().currentUser.photoURL }
                     }),
                     success: function (response) {
