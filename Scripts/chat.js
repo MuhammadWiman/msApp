@@ -1,4 +1,4 @@
-﻿var currentUserKey = '';
+var currentUserKey = '';
 var chatKey = '';
 var friend_id = '';
 
@@ -236,7 +236,7 @@ function SendMessage() {
                     },
                     data: JSON.stringify({
                         'to': data.val().token_id, 'data': { 'message': chatMessage.msg.substring(0, 30) + '...', 
-                        'icon': firebase.auth().currentUser.photoURL }
+                           'icon': firebase.auth().currentUser.photoURL }
                     }),
                     success: function (response) {
                         console.log(response);
