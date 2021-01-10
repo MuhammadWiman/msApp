@@ -232,7 +232,7 @@ function SendMessage() {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'key=AIzaSyDifQRePehp9--HSV6m10QnXgO12ZGYC00'
+                        'Authorization': 'key=AAAARZfIblQ:APA91bEQSw7KVxfgV0joumRaFbUezgSOJ0p-41LQgNpyCYSNYJZcSo5p61dBFPWf4t2Q-zTxxO-L6WbGkESw5IEpgIwRNWM-HDh5UDCqPIVIodXg5b0HOy0f_h2VROeogpyCxpwzHPNw'
                     },
                     data: JSON.stringify({
                         'to': data.val().token_id, 'data': { 'message': chatMessage.msg.substring(0, 30) + '...',
