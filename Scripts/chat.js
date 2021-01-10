@@ -223,9 +223,9 @@ function SendMessage() {
         dateTime: new Date().toLocaleString()
     };
 
-    //firebase.database().ref('chatMessages').child(chatKey).push(chatMessage, function (error) {
-        //if (error) alert(error);
-        //else {
+    firebase.database().ref('chatMessages').child(chatKey).push(chatMessage, function (error) {
+        if (error) alert(error);
+        else {
             //firebase.database().ref('fcmTokens').child(friend_id).once('value').then(function (data) {
                 //$.ajax({
                     //url: 'https://fcm.googleapis.com/fcm/send',
@@ -246,10 +246,10 @@ function SendMessage() {
                     //}
                 //});
             //});
-            //document.getElementById('txtMessage').value = '';
-            //document.getElementById('txtMessage').focus();
+            document.getElementById('txtMessage').value = '';
+            document.getElementById('txtMessage').focus();
         //}
-    //});
+    };
 }
 
 ///////////////////////////////////////////////////////////////
