@@ -135,4 +135,3 @@ body {
     font-weight: bold;
     margin-left: -12%;
 }
-})
