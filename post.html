@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sender Messages</title>
+</head>
+
+<body>
+    <h1>Sender Message</h1>
+    <form method="POST" onsubmit="return sendData()">
+        <p>
+            <label>Sender</label>
+            <input type="text" id="sender" placeholder="sender">
+        </p>
+        <p>
+            <label>Message</label><br>
+            <textarea id="msg" placeholder="Message" cols="50" rows="10"></textarea>
+        </p>
+        <button onclick="sendJSON()">Send Message</button>
+    </form>
+
+    <script>
+        function sendJSON(){ 
+			let sender = document.querySelector('#sender'); 
+			let msg = document.querySelector('#msg'); 
+			
+			// Creating a XHR object 
+			let xhr = new XMLHttpRequest(); 
+			let url = "http://muhammadwiman.github.io/msApp/message.json"; 
+		
+			// open a connection 
+			xhr.open("POST", url, true); 
+
+			// Set the request header i.e. which type of content you are sending 
+			xhr.setRequestHeader("Content-Type", "application/json"); 
+
+			// Create a state change callback 
+			xhr.onreadystatechange = function () { 
+				if (xhr.readyState === 4 && xhr.status === 200) { 
+
+					// Print received data from server 
+					result.innerHTML = this.responseText; 
+
+				} 
+			}; 
+
+			// Converting JSON data to string 
+			var data = JSON.stringify({"sender": sender.value, "msg": msg.value}); 
+
+			// Sending data with the request 
+			xhr.send(data); 
+		} 
+    </script>
+</body>
+</html>
