@@ -1,4 +1,3 @@
-const converted = {
   "body, html": {
     width: "100%",
     height: "100%",
@@ -76,4 +75,3 @@ const converted = {
     fontWeight: "bold",
     marginLeft: "-12%"
   }
-}
