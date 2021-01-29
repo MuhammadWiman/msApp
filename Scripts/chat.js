@@ -174,7 +174,6 @@ function LoadChatMessages(chatKey, friendPhoto) {
             if (chat.userId !== currentUserKey) {
                 messageDisplay += `<div class="row">
                                     <div class="col-2 col-sm-1 col-md-1">
-                                        <img src="${friendPhoto}" class="chat-pic rounded-circle" />
                                     </div>
                                     <div class="col-6 col-sm-7 col-md-7">
                                         <p class="receive">
@@ -193,7 +192,7 @@ function LoadChatMessages(chatKey, friendPhoto) {
                                 </p>
                             </div>
                             <div class="col-2 col-sm-1 col-md-1">
-                                <img src="${firebase.auth().currentUser.photoURL}" class="chat-pic rounded-circle" />
+                               
                             </div>
                         </div>`;
             }
@@ -236,7 +235,7 @@ function SendMessage() {
                     },
                     data: JSON.stringify({
                         'to': data.val().token_id, 'data': { 'message': chatMessage.msg.substring(0, 30) + '...',
-                        'icon': firebase.auth().currentUser.photoURL }
+                        //'icon': firebase.auth().currentUser.photoURL }
                     }),
                     success: function (response) {
                         console.log(response);
@@ -315,7 +314,7 @@ function LoadChatList() {
                     document.getElementById('lstChat').innerHTML += `<li class="list-group-item list-group-item-action" onclick="StartChat('${data.key}', '${user.name}', '${user.photoURL}')">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="${user.photoURL}" class="friend-pic rounded-circle" />
+                                   
                                 </div>
                                 <div class="col-md-10" style="cursor:pointer;">
                                     <div class="name">${user.name}</div>
@@ -351,7 +350,7 @@ function PopulateUserList() {
                         lst = `<li class="list-group-item list-group-item-action">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="${user.photoURL}" class="rounded-circle friend-pic" />
+                                    
                                 </div>
                                 <div class="col-md-10" style="cursor:pointer;">
                                     <div class="name">${user.name}
@@ -368,7 +367,7 @@ function PopulateUserList() {
                                 lst = `<li class="list-group-item list-group-item-action">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="${user.photoURL}" class="rounded-circle friend-pic" />
+                                    
                                 </div>
                                 <div class="col-md-10" style="cursor:pointer;">
                                     <div class="name">${user.name}
@@ -383,7 +382,7 @@ function PopulateUserList() {
                                 lst = `<li class="list-group-item list-group-item-action" data-dismiss="modal">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="${user.photoURL}" class="rounded-circle friend-pic" />
+                                    
                                 </div>
                                 <div class="col-md-10" style="cursor:pointer;">
                                     <div class="name">${user.name}
@@ -450,7 +449,7 @@ function PopulateNotifications() {
                 lst += `<li class="list-group-item list-group-item-action">
                             <div class="row">
                                 <div class="col-md-2">
-                                    <img src="${noti.photo}" class="rounded-circle friend-pic" />
+                                    
                                 </div>
                                 <div class="col-md-10" style="cursor:pointer;">
                                     <div class="name">${noti.name}
