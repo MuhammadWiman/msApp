@@ -571,7 +571,7 @@ function onStateChanged(user) {
                 firebase.database().ref('users').push(userProfile, callback);
             }
             else {
-                //document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+                document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
                 document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
 
                 document.getElementById('lnkSignIn').style = 'display:none';
@@ -598,7 +598,7 @@ function onStateChanged(user) {
         });
     }
     else {
-        //document.getElementById('imgProfile').src = 'images/pp.png';
+        document.getElementById('imgProfile').src = 'images/pp.png';
         document.getElementById('imgProfile').title = '';
 
         document.getElementById('lnkSignIn').style = '';
@@ -613,7 +613,7 @@ function callback(error) {
         alert(error);
     }
     else {
-        //document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
+        document.getElementById('imgProfile').src = firebase.auth().currentUser.photoURL;
         document.getElementById('imgProfile').title = firebase.auth().currentUser.displayName;
 
         document.getElementById('lnkSignIn').style = 'display:none';
