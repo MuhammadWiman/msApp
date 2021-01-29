@@ -7,7 +7,7 @@ var styles = {
             padding: "0",
             margin: "0",
             overflow: "hidden"
-    }
+    },
     htmlElement: {
             width: "100%",
             height: "100%",
