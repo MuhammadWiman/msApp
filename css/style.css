@@ -10,11 +10,11 @@ body {
     font-family: 'Segoe UI', Helvetica Nenu, Helvetica, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: linear-gradient(180deg, #dddbd1, #d2dbdc);
 }
-                                      
+
 .top {
     height: 130px;
     width: 100%;
-    background-color: #4dafff;
+    background-color: #009688;
     position: fixed;
     z-index: -1;
 }
@@ -79,7 +79,7 @@ body {
 
 .time {
     font-size: 10px;
-    color: black;
+    color: #9CA1A3;
     margin-top: 3%;
     margin-left: 1%;
 }
